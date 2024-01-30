@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Гіперболічний простір</title>
+    <title>Hyperbolic space</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -11,22 +11,34 @@
         <canvas id="view"></canvas>
       </div>
       <div class="sidebar">
-        <div class="label">Модель</div>
+        <div class="label">Model</div>
         <div>
           <input type="radio" name="projection" class="projection" value="poincare" id="projPoincare" checked />
-          <label for="projPoincare">Пуанкаре</label>
+          <label for="projPoincare">Poincare</label>
         </div>
         <div>
           <input type="radio" name="projection" class="projection" value="klein" id="projKlein" />
-          <label for="projKlein">Кляйна</label>
+          <label for="projKlein">Klein</label>
         </div>
         <div>
           <input type="radio" name="projection" class="projection" value="hyperboloid" id="projHyperboloid" />
-          <label for="projHyperboloid">Гіперболоїдна</label>
+          <label for="projHyperboloid">Hyperboloid</label>
         </div>
 
-        <div class="label">Радіус</div>
+        <div class="label">Depth</div>
         <input id="depth" type="range" min="0" max="7" step="1" />
+
+        <div class="label">Tiling Editor</div>
+        <input id="schlafliP" type="number" min="3" max="10" step="1" value="4" />
+        <input id="schlafliQ" type="number" min="5" max="15" step="1" value="5" />
+        <textarea id="tiling">1,1,1,1
+-,3,1,2
+-,3,4,-
+-,-,5,2
+-,3,1,6
+-,-,1,2
+-,3,2,-</textarea>
+        <input id="submitTiling" type="button" value="Submit Tiling" />
       </div>
     </div>
     <script src="./main.js" type="module"></script>
